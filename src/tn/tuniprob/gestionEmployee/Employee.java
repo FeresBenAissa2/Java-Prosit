@@ -54,9 +54,14 @@ public class Employee {
         this.nb_heure = nb_heure;
     }
     public boolean equals(Object o){
-        Employee e = (Employee) o;
-        System.out.println(e.id);
-        return this.id==e.getId()&&this.nom.equals(e.getNom())?true:false;
+        if (o instanceof Employee) {
+            Employee e = (Employee) o;
+            return this.id==e.getId()&&this.nom.equals(e.getNom())?true:false;
+        }else {
+            return false;
+        }
+
+
     }
 
 }
