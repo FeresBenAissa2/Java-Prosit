@@ -47,6 +47,8 @@ public class Main {
 
         Magasin magasin1 = new Magasin(1, " Carrefour", "Centre-Ville");
         Magasin magasin2 = new Magasin(2, "Monoprix", "Menzah 6");
+
+        System.out.println(magasin1);
        // premiere magasin
         Caissier caissier1M1 = new Caissier(1,"feres","hlif",20,1);
         Caissier caissier2M1 = new Caissier(2,"zaineb","zahra",200,2);
@@ -58,6 +60,8 @@ public class Main {
         Vendeur vendeur2M2 = new Vendeur(1,"mounir","hlif",20,50);
         Vendeur vendeur3M2 = new Vendeur(1,"mounir","hlif",20,50);
         Responsable responsable1M2 = new Responsable(1,"mounir","hlif",20,200);
+
+
         caissier1M2.AfficherEmployee();
         magasin1.ajouterProduit(p2);
         magasin1.ajouterProduit(p3);
@@ -75,8 +79,11 @@ public class Main {
         magasin1.ajouterEmployee(responsable1M2);
 
         magasin1.afficher();
+        magasin1.afficheSalaire();
         magasin1.afficherSalairePourChaqueEmployee();
-
+        magasin1.affichePrimeResponsable();
+        magasin1.afficherEmployeeParType();
+        System.out.println(caissier2M1.equals(caissier1M1));
 
 
 

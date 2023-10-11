@@ -53,5 +53,10 @@ public class Employee {
     public void setNb_heure(int nb_heure) {
         this.nb_heure = nb_heure;
     }
+    public boolean equals(Object o){
+        Employee e = (Employee) o;
+        System.out.println(e.id);
+        return this.id==e.getId()&&this.nom.equals(e.getNom())?true:false;
+    }
 
 }
