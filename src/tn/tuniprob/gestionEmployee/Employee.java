@@ -1,6 +1,6 @@
 package tn.tuniprob.gestionEmployee;
 
-public class Employee {
+public abstract class Employee {
     private int id ;
     private String nom ;
     private String adresse;
@@ -19,9 +19,7 @@ public class Employee {
 
     }
 
-    public double calculSalaire (){
-        return 0.0f;
-    }
+    public abstract double calculSalaire ();
     public int getId() {
         return id;
     }
