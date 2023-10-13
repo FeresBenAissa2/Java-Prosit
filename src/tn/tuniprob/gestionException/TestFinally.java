@@ -3,7 +3,7 @@ package tn.tuniprob.gestionException;
 import java.io.IOException;
 
 public class TestFinally {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
         try {
             System.out.println("entrer votre code ");
             // traiter cette exception
