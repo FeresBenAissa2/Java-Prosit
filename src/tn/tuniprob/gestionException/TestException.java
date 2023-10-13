@@ -27,7 +27,7 @@ public class TestException {
     } catch (FileNotFoundException f){
         System.out.println("FileNotFoundException");
     } catch (IOException Ioe){
-        System.out.println("IOException");
+        System.out.println("The file you have requested cannot be found.");
     }catch (Exception ex){
         System.out.println("Exception");
     }
