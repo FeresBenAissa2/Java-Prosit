@@ -1,12 +1,13 @@
 import tn.tuniprob.gestionEmployee.Caissier;
 import tn.tuniprob.gestionEmployee.Responsable;
 import tn.tuniprob.gestionEmployee.Vendeur;
+import tn.tuniprob.gestionException.SuperHotel;
 import tn.tuniprob.gestionmagasin.Magasin;
 import tn.tuniprob.gestionmagasin.Produit;
 
 public class Main {
     public static void main(String[] args) {
-        Produit p1 = new Produit();
+      /*  Produit p1 = new Produit();
         Produit p2 = new Produit(1021, "Lait", "Delice", 1350);
         Produit p3 = new Produit(2510, "Yaourt", "Vitalait", 550);
         Produit p4 = new Produit(3250, "Tomate,,", "Sicam", 1200);
@@ -31,7 +32,7 @@ public class Main {
         m1.ajouterProduit(p4);
 
         m1.supprimerProduit(p2);
-        m1.afficher();
+        m1.afficher();*/
         //m1.ajouterProduit(p5);
 
         //m1.afficher();
@@ -45,7 +46,7 @@ public class Main {
 
         // prosit 4
 
-        Magasin magasin1 = new Magasin(1, " Carrefour", "Centre-Ville");
+    /*    Magasin magasin1 = new Magasin(1, " Carrefour", "Centre-Ville");
         Magasin magasin2 = new Magasin(2, "Monoprix", "Menzah 6");
 
         System.out.println(magasin1);
@@ -83,10 +84,11 @@ public class Main {
         magasin1.afficherSalairePourChaqueEmployee();
         magasin1.affichePrimeResponsable();
         magasin1.afficherEmployeeParType();
-        System.out.println(caissier2M1.equals(caissier1M1));
+        System.out.println(caissier2M1.equals(caissier1M1));*/
 
 
-
+        SuperHotel s = new SuperHotel();
+        s.reserver();
 
     }
 }
