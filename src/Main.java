@@ -1,3 +1,5 @@
+import tn.tuniprob.exception.MagasinPleinException;
+import tn.tuniprob.exception.PrixNegatifException;
 import tn.tuniprob.gestionEmployee.Caissier;
 import tn.tuniprob.gestionEmployee.Responsable;
 import tn.tuniprob.gestionEmployee.Vendeur;
@@ -86,9 +88,27 @@ public class Main {
         magasin1.afficherEmployeeParType();
         System.out.println(caissier2M1.equals(caissier1M1));*/
 
+        // prosit 6
+        Produit p3 = null;
+        Produit p4 = null;
+        Produit p5 = null;
+        try {
+             p3 = new Produit(2510, "Yaourt", "Vitalait", -550);
+             p4 = new Produit(3250, "Tomate,,", "Sicam", 1200);
+             p5 = new Produit(1025, "Lait", "Delice", 1350);
+        }catch (PrixNegatifException pne){
+            System.out.println("prix must be positif");
+        }
+        try {
+            Magasin magasin1 = new Magasin(1, " Carrefour", "Centre-Ville");
+            magasin1.ajouterProduitExceptionTest(p3);
+            magasin1.ajouterProduitExceptionTest(p4);
+            magasin1.ajouterProduitExceptionTest(p5);
+        } catch (MagasinPleinException e) {
+            System.out.println("Magasin plein");
+        }
 
-        SuperHotel s = new SuperHotel();
-        s.reserver();
+        // Raise of ArrayIndexOutOfBounds Exception
 
     }
 }

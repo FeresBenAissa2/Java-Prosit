@@ -1,5 +1,6 @@
 package tn.tuniprob.gestionmagasin;
 
+import tn.tuniprob.exception.MagasinPleinException;
 import tn.tuniprob.gestionEmployee.Caissier;
 import tn.tuniprob.gestionEmployee.Employee;
 import tn.tuniprob.gestionEmployee.Responsable;
@@ -17,7 +18,7 @@ public class Magasin {
     Employee[] employees;
 
     public Magasin() {
-        this.produits = new Produit[50];
+        this.produits = new Produit[2];
         this.employees = new Employee[20];
         this.capacite = 0;
         this.capaciteEmp = 0;
@@ -28,7 +29,7 @@ public class Magasin {
         this.id = id;
         this.address = address;
         this.nom = nom;
-        this.produits = new Produit[50];
+        this.produits = new Produit[2];
         this.employees = new Employee[20];
         this.capacite = 0;
         this.capaciteEmp = 0;
@@ -44,7 +45,15 @@ public class Magasin {
             System.out.println("tn.tuniprob.gestionmag.Magasin is full. Cannot add more products.");
         }
     }
+    public void ajouterProduitExceptionTest(Produit p) throws MagasinPleinException {
 
+        if (capacite < produits.length) {
+            produits[capacite] = p;
+            capacite++;
+        } else {
+           throw new MagasinPleinException("");
+        }
+    }
     public void ajouterEmployee(Employee e) {
         if (capaciteEmp < employees.length) {
             employees[capaciteEmp] = e;
